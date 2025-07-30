@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Finança</string>
+    <string-array name="categorias_transacao">
+        <item>meta</item>
+        <item>dividas</item>
+        <item>lazer</item>
+        <item>investimento</item>
+    </string-array>
+</resources>

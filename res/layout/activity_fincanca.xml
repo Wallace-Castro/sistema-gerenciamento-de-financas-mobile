@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    tools:context=".FincancaActivity">
+
+    <Button
+        android:id="@+id/btnCriarOrcamento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Criar Orçamento"
+        android:textColor="@android:color/white"
+        android:backgroundTint="#4B0082"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/btnAdicionarTransacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Adicionar Transação"
+        android:textColor="@android:color/white"
+        android:backgroundTint="#4B0082"
+        app:layout_constraintTop_toBottomOf="@id/btnCriarOrcamento"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/btnCriarMeta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Criar Meta"
+        android:textColor="@android:color/white"
+        android:backgroundTint="#4B0082"
+        app:layout_constraintTop_toBottomOf="@id/btnAdicionarTransacao"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <LinearLayout
+        android:id="@+id/formCriarOrcamento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/btnCriarMeta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <EditText
+            android:id="@+id/etLimiteOrcamento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Limite"
+            android:textColorHint="@android:color/white"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@android:color/darker_gray" />
+
+        <EditText
+            android:id="@+id/etGastoAtualOrcamento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Gasto Atual"
+            android:textColorHint="@android:color/white"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@android:color/darker_gray" />
+
+        <EditText
+            android:id="@+id/etMesOrcamento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Mês"
+            android:textColorHint="@android:color/white"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@android:color/darker_gray"
+            android:focusable="false" />
+
+        <EditText
+            android:id="@+id/etAnoOrcamento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ano"
+            android:textColorHint="@android:color/white"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@android:color/darker_gray"
+            android:focusable="false" />
+
+        <Button
+            android:id="@+id/btnSalvarOrcamento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Salvar"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#4B0082" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/formAdicionarTransacao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/btnCriarMeta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <EditText
+            android:id="@+id/etValorTransacao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Valor"
+            android:textColorHint="@android:color/white"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@android:color/darker_gray" />
+
+        <EditText
+            android:id="@+id/etDataTransacao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Data"
+            android:textColorHint="@android:color/white"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@android:color/darker_gray"
+            android:focusable="false" />
+
+        <Spinner
+            android:id="@+id/spinnerCategoriaTransacao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/categorias_transacao" />
+
+        <Button
+            android:id="@+id/btnSalvarTransacao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Salvar"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#4B0082" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/formCriarMeta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/btnCriarMeta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <EditText
+            android:id="@+id/etValorMeta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Valor Meta"
+            android:textColorHint="@android:color/white"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@android:color/darker_gray" />
+
+        <EditText
+            android:id="@+id/etProgressoMeta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Progresso"
+            android:textColorHint="@android:color/white"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@android:color/darker_gray" />
+
+        <Button
+            android:id="@+id/btnSalvarMeta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Salvar"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#4B0082" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnPrincipal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Menu"
+        android:textColor="@android:color/white"
+        android:backgroundTint="#4B0082"
+        app:layout_constraintBottom_toTopOf="@id/btnVoltar"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="16dp" />
+
+    <Button
+        android:id="@+id/btnVoltar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Voltar"
+        android:textColor="@android:color/white"
+        android:backgroundTint="#4B0082"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
